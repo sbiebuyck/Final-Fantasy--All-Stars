@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Homes Table</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Homes</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Main Page</button>
+            <div class="dropdown-content">
+              <a href="index.html">Main Page</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Characters</button>
+            <div class="dropdown-content">
+              <a href="characters.html">Character</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Homes</button>
+            <div class="dropdown-content">
+              <a href="homes.html">Homes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Spells</button>
+            <div class="dropdown-content">
+              <a href="spells.html">Spells</a>
+              <a href="spellActions.html">Spell Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+                <button class="dropbtn">Abilities</button>
+                <div class="dropdown-content">
+                  <a href="abilities.html">Abilities</a>
+                  <a href="abilityActions.html">Ability Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Battle Actions</button>
+            <div class="dropdown-content">
+                <a href="battleactions.html">BattleActions</a>
+            </div>
+        </div>
+    </body>
+</html>
+        <div id="table" style="display:block">
+            <p>
+                <strong>Available Homes</strong>
+            </p>
+            <table  cellpadding="15">
+                <tbody>
+                    <tr>
+                        <th>homeID</th>
+                        <th>homeName</th>
+                        <th>postApoctalyptic</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nibelheim</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Esper World</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Zeal</td>
+                        <td>False</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Proto Dome</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Unknown</td>
+                        <td>False</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add" style="display: block">
+            <form id="addHome">
+            <legend> Add New Home</legend>
+            <fieldset class="fields">
+                <label> HomeName: </label>
+                <input type="text" name="name">
+                <label> postApoctalyptic: </label>
+                <input type="text" name="postApoctalyptic">
+            </fieldset>
+            <input class="btn" type="submit" id="addHome" value ="Add">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="add" style="display: block">
+            <form id="updateHome">
+            <legend> Update Existing Homes</legend>
+            <fieldset class="fields">
+                <label> HomeName: </label>
+                <input type="text" value="Esper World" name="home">
+                <label> postApoctalyptic: </label>
+                <input type="text" value="False" name="postApoctalyptic">
+            </fieldset>
+            <input class="btn" type="submit" id="updateHome" value ="Save">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="delete" style="display: block">
+            <form id="deleteHome">
+                <legend> Delete Existing Home</legend>
+                <fieldset class="fields">
+                    <p>Are you sure you want to delete {Home #2 - Esper World}?</p>
+                </fieldset>
+                <input class="btn" type="button" value = "Yes">
+                <input class="btn" type="button" value = "No">
+            </form>
+        </div>
+    </body>

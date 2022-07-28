@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <title>Spells List</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Spells</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Main Page</button>
+            <div class="dropdown-content">
+              <a href="index.html">Main Page</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Characters</button>
+            <div class="dropdown-content">
+              <a href="characters.html">Character</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Homes</button>
+            <div class="dropdown-content">
+              <a href="homes.html">Homes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Spells</button>
+            <div class="dropdown-content">
+              <a href="spells.html">Spells</a>
+              <a href="spellActions.html">Spell Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+                <button class="dropbtn">Abilities</button>
+                <div class="dropdown-content">
+                  <a href="abilities.html">Abilities</a>
+                  <a href="abilityActions.html">Ability Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Battle Actions</button>
+            <div class="dropdown-content">
+                <a href="battleactions.html">BattleActions</a>
+            </div>
+        </div>
+
+        <div id="table" style="display:block">
+            <p>
+                <strong>Available Spells</strong>
+            </p>
+            <table  cellpadding="15">
+                <tbody>
+                    <tr>
+                        <th>spellID</th>
+                        <th>spellName</th>
+                        <th>spellEffect</th>
+                        <th>spellType</th>
+
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Fire</td>
+                        <td>cost 4mp damage single 50hp</td>
+                        <td>fire</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Firaga</td>
+                        <td>cost 12mp damage all 400hp proc chance to incinerate</td>
+                        <td>fire</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ice</td>
+                        <td>cost 4mp damage single 50hp</td>
+                        <td>ice</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Blizzaga</td>
+                        <td>cost 12mp damage all 400hp proc chance to freeze</td>
+                        <td>ice</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Lightning</td>
+                        <td>cost 4mp damage single 50hp</td>
+                        <td>lightning</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Luminaire</td>
+                        <td>cost 12mp damage all 400hp proc chance to blind</td>
+                        <td>lightning</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Aero</td>
+                        <td>cost 4mp damage single 50hp</td>
+                        <td>wind</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Aeraga</td>
+                        <td>cost 12mp damage all 400hp proc chance to confuse</td>
+                        <td>wind</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Quake</td>
+                        <td>cost 4mp damage single 50hp</td>
+                        <td>earth</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Quaga</td>
+                        <td>cost 12mp damage all 400hp proc chance to stun</td>
+                        <td>earth</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Cure</td>
+                        <td>cost 4mp restore single ally 100hp</td>
+                        <td>life</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Esuna</td>
+                        <td>cost 2mp remove negative status effects single char</td>
+                        <td>life</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Slow</td>
+                        <td>cost 6mp half turn recovery single char</td>
+                        <td>time</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add" style="display: block">
+            <form id="addSpell">
+            <legend> Add New Spell</legend>
+            <fieldset class="fields">
+                <label> Spell Name: </label>
+                <input type="text" name="spellName">
+                <label> Spell Effect: </label>
+                <input type="text" name="spellEffect">
+                <label> Spell Type: </label>
+                <input type="text" name="spellType">
+            </fieldset>
+            <input class="btn" type="submit" id="addSpell" value ="Add">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="add" style="display: block">
+            <form id="updateSpell">
+            <legend> Update Existing Spell</legend>
+            <fieldset class="fields">
+                <label> Spell Name: </label>
+                <input type="text" value= "Cure" name="spellName">
+                <label> Spell Effect: </label>
+                <input type="text" value="cost 4mp restore single ally 100hp" name="spellEffect">
+                <label> Spell Type: </label>
+                <input type="text" value="life" name="spellType">
+            </fieldset>
+            <input class="btn" type="submit" id="updateSpell" value ="Save">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="delete" style="display: block">
+            <form id="deleteSpell">
+                <legend> Delete Existing Spell</legend>
+                <fieldset class="fields">
+                    <p>Are you sure you want to delete {Spell #2 - Cure}?</p>
+                </fieldset>
+                <input class="btn" type="button" value = "Yes">
+                <input class="btn" type="button" value = "No">
+            </form>
+        </div>
+    </body>

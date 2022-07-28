@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Ability Actions</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Ability Actions</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Main Page</button>
+            <div class="dropdown-content">
+              <a href="index.html">Main Page</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Characters</button>
+            <div class="dropdown-content">
+              <a href="characters.html">Character</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Homes</button>
+            <div class="dropdown-content">
+              <a href="homes.html">Homes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Spells</button>
+            <div class="dropdown-content">
+              <a href="spells.html">Spells</a>
+              <a href="spellActions.html">Spell Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+                <button class="dropbtn">Abilities</button>
+                <div class="dropdown-content">
+                  <a href="abilities.html">Abilities</a>
+                  <a href="abilityActions.html">Ability Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Battle Actions</button>
+            <div class="dropdown-content">
+                <a href="battleactions.html">BattleActions</a>
+            </div>
+        </div>
+        <div id="table" style="display:block">
+            <p>
+                <strong>Registered Ability Actions</strong>
+            </p>
+            <table cellpadding="15">
+                <tbody>
+                    <tr>
+                        <th>abilityID</th>
+                        <th>actionID</th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th>1</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>3</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add" style="display: block">
+            <form id="addAbilityctions">
+            <legend> Add New AbilityActions</legend>
+            <fieldset class="fields">
+                <label> abilityID: </label>
+                <input type="text" name="name">
+                <label> actionID: </label>
+                <input type="text" name="Effect">
+            </fieldset>
+            <input class="btn" type="submit" id="Effect" value ="Add">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="add" style="display: block">
+            <form id="updateEffect">
+            <legend> Update Existing AbilityActions</legend>
+            <fieldset class="fields">
+                <label> abilityID: </label>
+                <input type="text" value="2" name="abilityID">
+                <label> actionID: </label>
+                <input type="text" value="3" name="Effect">
+            </fieldset>
+            <input class="btn" type="submit" id="updateEffect" value ="Save">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="delete" style="display: block">
+            <form id="deleteHome">
+                <legend> Delete Existing AbilityActions</legend>
+                <fieldset class="fields">
+                    <p>Are you sure you want to delete {Ability #2 - Action #3}?</p>
+                </fieldset>
+                <input class="btn" type="button" value = "Yes">
+                <input class="btn" type="button" value = "No">
+            </form>
+        </div>
+    </body>
+    </body>

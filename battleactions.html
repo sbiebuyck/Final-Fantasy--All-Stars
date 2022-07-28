@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Battle Actions Table</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>BattleActions</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Main Page</button>
+            <div class="dropdown-content">
+              <a href="index.html">Main Page</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Characters</button>
+            <div class="dropdown-content">
+              <a href="characters.html">Character</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Homes</button>
+            <div class="dropdown-content">
+              <a href="homes.html">Homes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Spells</button>
+            <div class="dropdown-content">
+              <a href="spells.html">Spells</a>
+              <a href="spellActions.html">Spell Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+                <button class="dropbtn">Abilities</button>
+                <div class="dropdown-content">
+                  <a href="abilities.html">Abilities</a>
+                  <a href="abilityActions.html">Ability Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Battle Actions</button>
+            <div class="dropdown-content">
+                <a href="battleactions.html">BattleActions</a>
+            </div>
+        </div>
+        <div id="table" style="display:block">
+            <p>
+                <strong>Available BattleActions</strong>
+            </p>
+            <table cellpadding="15">
+                <tbody>
+                    <tr>
+                        <th>actionID</th>
+                        <th>actionEffect</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>all heroes damaged 700hp</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>heal Terra 100hp</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Terra 2x attack 2x magic def for 5 turns</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add" style="display: block">
+            <form id="addBattleActions">
+            <legend> Add New BattleActions</legend>
+            <fieldset class="fields">
+                <label> Effect: </label>
+                <input type="text" name="name">
+            </fieldset>
+            <input class="btn" type="submit" id="Effect" value ="Add">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="add" style="display: block">
+            <form id="updateEffect">
+            <legend> Update Existing BattleActions</legend>
+            <fieldset class="fields">
+                <label> actionID: </label>
+                <input type="text" value="2" name="actionID">
+                <label> Effect: </label>
+                <input type="text" value="heal Terra 100hp" name="Effect">
+            </fieldset>
+            <input class="btn" type="submit" id="updateEffect" value ="Save">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="delete" style="display: block">
+            <form id="deleteHome">
+                <legend> Delete Existing BattleActions</legend>
+                <fieldset class="fields">
+                    <p>Are you sure you want to delete {Action #2 - heal Terra 100hp}?</p>
+                </fieldset>
+                <input class="btn" type="button" value = "Yes">
+                <input class="btn" type="button" value = "No">
+            </form>
+        </div>
+    </body>

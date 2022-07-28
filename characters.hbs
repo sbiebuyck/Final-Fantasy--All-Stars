@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>Characters Table </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Characters</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Main Page</button>
+            <div class="dropdown-content">
+              <a href="index.html">Main Page</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Characters</button>
+            <div class="dropdown-content">
+              <a href="characters.html">Character</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Homes</button>
+            <div class="dropdown-content">
+              <a href="homes.html">Homes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Spells</button>
+            <div class="dropdown-content">
+              <a href="spells.html">Spells</a>
+              <a href="spellActions.html">Spell Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+                <button class="dropbtn">Abilities</button>
+                <div class="dropdown-content">
+                  <a href="abilities.html">Abilities</a>
+                  <a href="abilityActions.html">Ability Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Battle Actions</button>
+            <div class="dropdown-content">
+                <a href="battleactions.html">BattleActions</a>
+            </div>
+        </div>
+
+
+        <div id="table" style="display:block">
+            <p>
+                <strong>Available Characters</strong>
+            </p>
+            <table cellpadding="15">
+                <thead>
+                    <tr>
+                        {{#each data.[0]}}
+                        <th>
+                            {{@key}}
+                        </th>
+                        {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr>
+                        <th>{{this.characterID}}</th>
+                        <th>{{this.characterName}}</th>
+                        <th>{{this.homeID}}</th>
+                        <th>{{this.health}}</th>
+                        <th>{{this.mana}}</th>
+                        <th>{{this.attack}}</th>
+                        <th>{{this.inParty}}</th>
+                        <th>{{this.nBattle}}</th>
+                        <th>{{this.abilityID}}</th>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        <div id="add" style="display: block">
+            <form id="addCharacter" method="POST" action="/addCharacter">
+            <legend> Add New Character</legend>
+            <fieldset class="fields">
+                <label for="input-name"> Name: </label>
+                <input type="text" name="input-name" id="input-name">
+
+                <label for="input-home"> Home: </label>
+                <input type="text" name="input-home" id="input-home">
+
+                <label for="input-health"> Health: </label>
+                <input type="text" name="input-health" id="input-health">
+
+                <label for="input-mana"> Mana: </label>
+                <input type="text" name="input-mana" id="input-mana">
+
+                <label for="input-attack"> Attack: </label>
+                <input type="text" name="input-attack" id="input-attack">
+
+                <label for="input-inParty"> inParty: </label>
+                <input type="text" name="input-inparty" id="input-inParty">
+
+                <label for="input-inBattle"> inBattle: </label>
+                <input type="text" name="input-inBattle" id="input-inBattle">
+
+                 <label for="input-abilityID"> abilityID: </label>
+                <input type="text" name="input-abilityID" id="input-abilityID">
+            </fieldset>
+            <input class="btn" type="submit" id="addCharacter" value ="Add">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <script src="./js/add_character.js"></script>
+
+        <div id="add" style="display: block">
+            <form id="updateCharacter">
+            <legend> Update Existing Character</legend>
+            <fieldset class="fields">
+                <label> Name: </label>
+                <input type="text" value= "Terra" name="name">
+                <label> Home: </label>
+                <input type="text" value="Esper World" name="home">
+                <label> Health: </label>
+                <input type="text" value="999" name="health">
+                <label> Mana: </label>
+                <input type="text" value="99" name="mana">
+                <label> Attack: </label>
+                <input type="text" value="64" name="attack">
+                <label> inParty: </label>
+                <input type="text" value="True" name="inparty">
+                <label> inBattle: </label>
+                <input type="text" value="True" name="inBattle">
+            </fieldset>
+            <input class="btn" type="submit" id="updateCharacter" value ="Save">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="delete" style="display: block">
+            <form id="deleteCharacter">
+                <legend> Delete Existing Character</legend>
+                <fieldset class="fields">
+                    <p>Are you sure you want to delete {Character #2 - Terra from Esper World}?</p>
+                </fieldset>
+                <input class="btn" type="button" value = "Yes">
+                <input class="btn" type="button" value = "No">
+            </form>
+        </div>
+    </body>

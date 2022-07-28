@@ -3,53 +3,62 @@
     SETUP
 */
 // Express
+
+const { engine } = require('express-handlebars');
+var exphbs = require('express-handlebars');     // Import express-handlebars
+app.engine('.hbs', engine({extname: ".hbs"}));  // Create an instance of the handlebars engine to process templates
+app.set('view engine', '.hbs');
 var express = require('express');   // We are using the express library for the web server
-var app     = express();            // We need to instantiate an express object to interact with the server in our code
+var app     = express.json();            // We need to instantiate an express object to interact with the server in our code
 PORT        = 50000;                 // Set a port number at the top so it's easy to change in the future
 
 /*
     ROUTES
 */
 
-app.get('/index.html', function(req, res){
-    res.sendFile('/index.html', {root: __dirname });
-});
+app.get('/', function(req, res)
+    {
+        let query1 = "SELECT * FROM dml;";
 
-app.get('/battleactions.html', function(req, res){
-    res.sendFile('/battleactions.html', {root: __dirname });
-});
+        db.pool.query(query1, function(error, rows, fields){
 
-app.get('/homes.html', function(req, res){
-    res.sendFile('/homes.html', {root: __dirname });
-});
+            res.render('index', {data: rows});
+        })
+    });
 
-app.get('/spells.html', function(req, res){
-    res.sendFile('/spells.html', {root: __dirname });
-});
+    app.post('/addCharacter', function(req, res){
+        let data = req.body;
 
-app.get('/abilities.html', function(req, res){
-    res.sendFile('/abilities.html', {root: __dirname });
-});
+        // Patrick - this section needs to be modified - not sure what we have that is NULL
+        // let homeworld = parseInt(data['input-homeworld']);
+        // if (isNaN(homeworld))
+        // {
+        //     homeworld = 'NULL'
+        // }
 
-app.get('/characters.html', function(req, res){
-    res.sendFile('/characters.html', {root: __dirname });
-});
+        // let age = parseInt(data['input-age']);
+        // if (isNaN(age))
+        // {
+        //     age = 'NULL'
+        // }
 
-app.get('/characterSpells.html', function(req, res){
-    res.sendFile('/characterSpells.html', {root: __dirname });
-});
 
-app.get('/characterActions.html', function(req, res){
-    res.sendFile('/characterActions.html', {root: __dirname });
-});
+        query1 = `INSERT INTO Characters (characterName, homeID, attack, health, mana, inParty, inBattle, abilityID) VALUES ('${data.characterName}', '${data.homeID}', ${attack}, ${health}, ${mana}, ${inBattle}, ${inParty}, ${abilityID})`;
+        db.pool.query(query1, function(error, rows, fields){
 
-app.get('/abilityActions.html', function(req, res){
-    res.sendFile('/abilityActions.html', {root: __dirname });
-});
 
-app.get('/spellActions.html', function(req, res){
-    res.sendFile('/spellActions.html', {root: __dirname });
-});
+            if (error) {
+
+                console.log(error)
+                res.sendStatus(400);
+            }
+
+            else
+            {
+                res.redirect('/');
+            }
+        })
+    });
 
 
 /*

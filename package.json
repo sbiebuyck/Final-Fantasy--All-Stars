@@ -1,16 +1,25 @@
 {
-    "name": "assignment2",
-    "version": "1.0.0",
-    "description": "",
-    "main": "app.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "SaraBiebuyck",
-    "license": "ISC",
-    "dependencies": {
-      "express": "^4.18.1",
-      "forever": "^4.0.3",
-      "mysql": "^2.18.1"
-    }
-  }
+  "name": "ff_all_stars",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SaraBiebuyck",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "forever": "^4.0.3",
+    "mysql": "^2.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbiebuyck/Final-Fantasy--All-Stars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sbiebuyck/Final-Fantasy--All-Stars/issues"
+  },
+  "homepage": "https://github.com/sbiebuyck/Final-Fantasy--All-Stars#readme",
+  "description": ""
+}

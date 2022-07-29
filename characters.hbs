@@ -56,6 +56,7 @@
             <table cellpadding="15">
                 <thead>
                     <tr>
+                        <th>Delete</th>
                         {{#each data.[0]}}
                         <th>
                             {{@key}}
@@ -64,8 +65,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <form id="deleteForm">
                     {{#each data}}
                     <tr>
+                        <th><input type="checkbox" id={{this.characterID}} name="deleteChar" value={{this.characterID}}></th>
                         <th>{{this.characterID}}</th>
                         <th>{{this.characterName}}</th>
                         <th>{{this.homeID}}</th>
@@ -73,12 +76,14 @@
                         <th>{{this.mana}}</th>
                         <th>{{this.attack}}</th>
                         <th>{{this.inParty}}</th>
-                        <th>{{this.nBattle}}</th>
+                        <th>{{this.inBattle}}</th>
                         <th>{{this.abilityID}}</th>
                     </tr>
                     {{/each}}
+                    </form>
                 </tbody>
             </table>
+            <button type="submit" form="deleteForm">Delete Character</button>
         </div>
 
         <div id="add" style="display: block">

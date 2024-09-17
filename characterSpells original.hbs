@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Character Spells</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Character Spells</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Main Page</button>
+            <div class="dropdown-content">
+              <a href="index.html">Main Page</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Characters</button>
+            <div class="dropdown-content">
+              <a href="characters.html">Character</a>
+              <a href="characterSpells.html">Character Spells</a>
+              <a href="characterActions.html">Character Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Homes</button>
+            <div class="dropdown-content">
+              <a href="homes.html">Homes</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Spells</button>
+            <div class="dropdown-content">
+              <a href="spells.html">Spells</a>
+              <a href="spellActions.html">Spell Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+                <button class="dropbtn">Abilities</button>
+                <div class="dropdown-content">
+                  <a href="abilities.html">Abilities</a>
+                  <a href="abilityActions.html">Ability Actions</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Battle Actions</button>
+            <div class="dropdown-content">
+                <a href="battleactions.html">BattleActions</a>
+            </div>
+        </div>
+        <div id="table" style="display:block">
+            <p>
+                <strong>Registered Character Spells</strong>
+            </p>
+            <table cellpadding="15">
+                <tbody>
+                    <tr>
+                        <th>characterID</th>
+                        <th>spellID</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>5</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>11</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>2</th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>13</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>6</th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>14</th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th>10</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add" style="display: block">
+            <form id="addCharacterSpells">
+            <legend> Add New Character Spells</legend>
+            <fieldset class="fields">
+                <label> characterID: </label>
+                <input type="text" name="characterID">
+                <label> spellID: </label>
+                <input type="text" name="spellID">
+            </fieldset>
+            <input class="btn" type="submit" id="Spells" value ="Add">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="add" style="display: block">
+            <form id="updateSpells">
+            <legend> Update Existing Character Spells</legend>
+            <fieldset class="fields">
+                <label> characterID: </label>
+                <input type="text" value="2" name="actionID">
+                <label> spellID: </label>
+                <input type="text" value="13" name="Spells">
+            </fieldset>
+            <input class="btn" type="submit" id="updateSpells" value ="Save">
+            <input class="btn" type="button" value = "Cancel">
+        </form>
+        </div>
+
+        <div id="delete" style="display: block">
+            <form id="deleteHome">
+                <legend> Delete Existing Character Spells</legend>
+                <fieldset class="fields">
+                    <p>Are you sure you want to delete {Character #2 - Spell #13}?</p>
+                </fieldset>
+                <input class="btn" type="button" value = "Yes">
+                <input class="btn" type="button" value = "No">
+            </form>
+        </div>
+    </body>
+
+    </body>
